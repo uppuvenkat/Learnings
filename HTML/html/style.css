@@ -1,0 +1,74 @@
+.main{
+    height: 100vh
+}
+body{
+    margin: 0px;
+}
+.header{
+    height: 60px;
+    width: 100%;
+    display: flex;
+}
+.logo{
+    width: 20%;
+    margin: 11px;
+    font-size: 2em;
+    color: #1a2ebd;
+    font-weight: bold;
+}
+.menu{
+    height: 40px;
+    width: 80%;
+    margin: 10px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+.menu>div{
+    text-align: center;
+    margin-left: 15%;
+}
+/* content sec */
+.content{
+    height: calc(100vh - 60px);
+    width: 100%;
+    /* background-color: rgb(216, 78, 193); */
+    display: flex;
+    border-top: 3px solid #bdbdbd;
+}
+.imageSec{
+    width: 65%;
+    border-right: 3px solid #bdbdbd;
+}
+.descSec{
+    width: 35%;
+    /* background-color: rgb(0, 47, 255); */
+}
+.imgTitle{
+    margin: 15px;
+    font-size: 20px;
+    height: 25px;
+    color: darksalmon;
+}
+.images{
+    display: flex;
+}
+.thumbnails{
+    width: 30%;
+    height: calc(99vh - 115px);
+    text-align: center;
+}
+.thumbnails img{
+    height: 130px;
+    margin: 5px;
+    border: 1px solid #dbcbea;
+}
+.heroImg{
+    width: 70%;
+    height: calc(99vh - 115px);
+    text-align: center;
+}
+.heroImg img{
+    height: 26em;
+    width: 23em;
+}

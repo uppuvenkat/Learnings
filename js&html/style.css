@@ -1,0 +1,100 @@
+.main{
+    text-align: center;
+    margin: 3%;
+    /* background-color: grey; */
+}
+/* p{
+    color: red;
+} */
+
+.para{
+    color: green;
+}
+.para1{
+    color:violet;
+}
+.parent1{
+    /* border: 1px solid; */
+    /* position: relative; */
+    /* position: absolute; */
+
+}
+.firs{
+    height: 100px;
+    border: 1px solid;
+    background: rebeccapurple;
+}
+.sec{
+    height: 100px;
+    width: 400px;
+    border: 1px solid;
+    background: red;
+    position: absolute;
+} 
+.third{
+    height: 120px;
+    width: 350px;
+    border: 1px solid;
+    background: royalblue;
+    position: absolute;
+}  
+.fourth{
+    position: relative;
+    height: 100px;
+    width: 300px;
+    border: 1px solid;
+    background: rgb(150, 97, 129);
+} 
+.fifth{
+    position: relative;
+    height: 100px;
+    width: 250px;
+    border: 1px solid;
+    background: rgb(119, 160, 214);
+} 
+.sixth{
+    border: 1px solid;
+    position: absolute;
+}
+.seventh{
+    border: 1px solid;
+    position: absolute;
+    background: sienna;
+}
+.parent2{
+    height: 100px;
+    width: 450px;
+    background: seagreen;
+    border: 1px solid;
+    /* position: relative; */
+}
+
+/* test.html */
+body{
+    margin: 5% 15%;
+}
+.parent{
+    background-color: rgb(148, 178, 235);
+    /* position: relative; */
+}
+
+.child{
+    /* height: 40px; */
+    /* width: 40px; */
+    background-color: red;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 20px;
+    /* right: 0; */
+}
+.one{
+    display:inline;
+    /* width: 40%; */
+    border: 1px solid;
+}
+.two{
+    float: right;
+    width: 40%;
+}

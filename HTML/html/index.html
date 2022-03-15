@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>web using flex</title>
+    <link rel="stylesheet" href="./style.css"  />
+    <script>
+        function testFn(){
+            console.log('kkkkk')
+        }
+        function resetRadioSelection(){
+            var ele = document.getElementsByName("Choose");
+            for(var i=0;i<ele.length;i++)
+                ele[i].checked = false; 
+        }
+        window.onload = function(e){ 
+            var ele = document.getElementsByName("Choose");
+            for(var i=0;i<ele.length;i++)
+                ele[i].checked = false; 
+        }
+    </script>
+</head>
+<body>
+   <div class="main">
+       <div>
+          <input type="radio" id="html" name="Choose" value="HTML">
+          <label for="html">HTML</label><br>
+          <input type="radio" id="css" name="Choose" value="CSS">
+          <label for="css">CSS</label><br>
+          <input type="radio" id="javascript" name="Choose" value="JavaScript">
+          <label for="javascript">JavaScript</label>
+       </div>
+       <div>
+        <button onclick="testFn()">Test</button>
+        <button onclick="resetRadioSelection()">Reset</button>
+       </div>
+        <!-- <div class="header">
+            <div class="logo">Logo</div>
+            <div class="menu">
+                <div>About us</div>
+                <div>Mens</div>
+                <div>Womens</div>
+                <div>Feedback</div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="imageSec">
+                <div class="imgTitle">Design Wear Dress</div>
+                <div class="images">
+                    <div class="thumbnails">
+                        <img src="./img1.jfif" />
+                        <img src="./img2.jfif" />
+                        <img src="./img3.jfif" />
+                    </div>
+                    <div class="heroImg">
+                        <img src="./mainImg.jpg" />
+                    </div>
+                </div>
+            </div>
+            <div class="descSec"></div>
+        </div> -->
+   </div>
+</body>
+</html>
