@@ -78,6 +78,7 @@
 //         console.log(st)
 //     }
 // }
+
 // Pyramid(5)
 
 //finding input is array or not

@@ -62,7 +62,7 @@
 //      }
 // }
 // var myCar = new Car('ford')
-// car.getDetails(myCar);
+// Car.getDetails(myCar);
 
 //inheritance
 
@@ -483,3 +483,336 @@
 
 // console.log(1 || 2) // returns 1 -- checks for first value, if valid returns first itself otherwise second
 // console.log(1 && 2) // returns 2 -- checks for first value, if valid returns second
+
+//.10 ############ Spreadt and Rest operators
+// Spread - pulling out form existing arr and spreadding in to new array
+// let arr = [1,2,3,4]
+// let copArr = arr.splice() // copying the existing arr
+// let newArr = [...arr] // new array
+
+//rest
+// const toArr = (...args)=>{
+//     return args
+// }
+// toArr(1,2,3,4)
+
+//11. object destructuring
+// let obj = {name:"venkat", age:30, addr:"nellore"}
+// let {name, age} = obj
+
+// let arr = ["venkat", "ramana"]
+// let [venkat,x] = arr
+
+//####### callbacks and promises
+// callback
+// const fetchData = callback =>{
+//     setTimeout(()=>{
+//         callback('Done')
+//     }, 2000)
+// }
+
+// setTimeout(()=>{
+//     console.log("Timer is DOne")
+//     fetchData((text)=>{
+//         console.log(text)
+//     })
+
+// }, 2000)
+
+// Promises
+// const fetchData = callback =>{
+//    const promise = new Promise((resolve, reject)=>{
+//     setTimeout(()=>{
+//        resolve('Done !')
+//     }, 2000)
+//    })
+// }
+
+// setTimeout(()=>{
+//     console.log("Timer is DOne")
+//     fetchData().then(text=> {
+//         console.log(text);
+//         return fetchData();
+//     })
+//     .then(text2=> {
+//         console.log(text2);
+//     })
+
+// }, 2000)
+
+// ########## this key word in normal and arrow function
+
+// ### Normal Function - this keyword here refers to current context/object
+// let obj = {
+//     name: 'venkat',
+//     age:20,
+//     addr:'bellore',
+//     getDetails: function(){
+//         console.log(`Name : ${this.name} \nAge: ${this.age} \nAddr: ${this.addr}`)
+//     }
+// }
+
+//#### Arrow Function - this keyword in arrow function refers to the global object
+// let obj = {
+//     name: 'venkat',
+//     age:20,
+//     addr:'bellore',
+//     getDetails: () => {
+//         console.log(`Name : ${this.name} \nAge: ${this.age} \nAddr: ${this.addr}`)
+//     }
+// }
+
+// obj.getDetails()
+
+//########## primitives and non primitives
+//primitives - has no methods
+//eg.: string, number, boolean..etc
+//Non primitives - representation of collection of data
+//eg.: Array, object
+
+//########## Hoisting
+//########### == and === difference
+// let x = 2;
+// let y = '2';
+// console.log(x==y); // true - will not check type
+// console.log(x===y); // false - will check type
+
+// ######## Implicit Type Coercion in javascript.
+//Implicit type coercion in javascript is the automatic conversion of value from one data type to another.
+
+//###### runtime vs compile time
+// Compile-time and Runtime are the two programming terms used in the software development. 
+// Compile-time is the time at which the source code is converted into an executable code while the run time is the time at which the executable code is started running.
+
+//########## Is javascript a statically typed or a dynamically typed language?
+// JavaScript is a dynamically typed language. In a dynamically typed language, 
+// the type of a variable is checked during run-time in contrast to a statically typed language, 
+// where the type of a variable is checked during compile-time.
+
+//######## NaN property
+// isNaN("Hello")  // Returns true
+// isNaN(345)   // Returns false
+// isNaN('1')  // Returns false, since '1' is converted to Number type which results in 0 ( a number) 
+// isNaN(true) // Returns false, since true converted to Number type results in 1 ( a number)
+// isNaN(false) // Returns false
+// isNaN(undefined) // Returns true
+
+
+//########### passed by value and passed by reference.
+//Pass by value
+// var y = 234;
+// var z = y;
+// var y = #8454; // y pointing to address of the value 234
+// var z = y; 
+// var z = #5411; // z pointing to a completely new address of the value 234
+// // Changing the value of y
+// y = 23;
+// console.log(z);  // Returns 234, since z points to a new address in the memory so changes in y will not effect z
+
+//Pass by reference
+// var obj = { name: "Vivek", surname: "Bisht" };
+// var obj2 = obj;
+// var obj = #8711;  // obj pointing to address of { name: "Vivek", surname: "Bisht" }
+// var obj2 = obj;
+// var obj2 = #8711; // obj2 pointing to the same address 
+// // changing the value of obj1
+// obj1.name = "Akki";
+// console.log(obj2)
+
+//######### strict mode
+// Characteristics of strict mode in javascript
+// Duplicate arguments are not allowed by developers.
+// In strict mode, you won't be able to use the JavaScript keyword as a parameter or function name.
+// The 'use strict' keyword is used to define strict mode at the start of the script. Strict mode is supported by all browsers.
+// Engineers will not be allowed to create global variables in 'Strict Mode
+// #######. Explain “this” keyword.
+// var obj = {
+//     name:  "vivek",
+//     getName: function(){
+//     console.log(this.name);
+//   }
+     
+// }
+       
+// var getName = obj.getName;
+       
+// var obj2 = {name:"akshay", getName };
+// obj2.getName();
+
+// een,
+// odd, 
+//prime,
+// duplicate removal in arr, 
+//palindrome
+//string reverse
+//pyramid shape
+//factorial w/o for loop
+
+//########### call(), apply() and, bind() 
+//call
+// case;1
+// function sayHello(){
+//     return "Hello " + this.name;
+//   }
+//   var obj = {name: "Sandy"};
+//   sayHello.call(obj); // Returns "Hello Sandy"
+//   //case:2
+//   var person = {
+//     age: 23,
+//     getAge: function(){
+//       return this.age;
+//     }
+//   }        
+//   var person2 = {age:  54};
+//   person.getAge.call(person2);  // Returns 54 
+// //   case:3
+// function saySomething(message){
+//     return this.name + " is " + message;
+//   }     
+//   var person4 = {name:  "John"};     
+//   saySomething.call(person4, "awesome"); // Returns "John is awesome"    
+//Apply
+// function saySomething(...message){
+//     console.log(message)
+//     return this.name + " is " + message[1];
+//   }        
+//   var person4 = {name:  "John"};
+//   let d = saySomething.apply(person4, ["awesome", "venkat"]);
+// console.log(d);
+// bind
+// var bikeDetails = {
+//     displayDetails: function(registrationNumber,brandName){
+//     return this.name+ " , "+ "bike details: "+ registrationNumber + " , " + brandName;
+//   }
+// }
+// var person1 = {name:  "Vivek"};
+// var detailsOfPerson1 = bikeDetails.displayDetails.bind(person1, "TS0122", "Bullet");
+// // Binds the displayDetails function to the person1 object
+//       console.log(detailsOfPerson1());
+
+// var foo = function* () {
+//     yield 'A'; // this yield pushes 'A' and returns 'a'
+//     yield 'B'; // this yield pushes 'B' and returns 'b'
+//   };
+  
+//   var f = foo();
+  
+//   console.log(f.next()); // { value: 'A', done: false }
+//   console.log(f.next('a'));                 // { value: 'B', done: false }
+//   console.log(f.next('b'));                 // { value: undefined, done: true }
+  
+//   // any further call just returns whatever the last returned value was
+//   console.log(f.next()); // { value: undefined, done: true }
+// let newSet = new Set([1,2,3,4])
+// console.log(newSet.keys())
+
+// const map1 = new Map();
+// map1.set('Value', 1);
+// map1.set('dd',21);
+
+// const map2 = new WeakMap();
+// map2.set('Value', 2.3); // Throws an error
+
+// let obj = {name:"Vivek"};
+// const map3 = new WeakMap();
+// map3.set(obj, {age:23})
+
+// console.log(map1.get('dd'));
+
+//  function a(){
+//     console.log('aa:',this);
+  
+//     const b = {
+//       func1: function(){
+//         console.log('bbb:',this);
+//       }  
+//     }
+  
+//     const c = {
+//       func2: ()=>{
+//         console.log('ccc:',this);
+//       }
+//     }
+  
+//     b.func1();
+//     c.func2();
+//   }
+  
+// //   a();
+// (function(a){
+//      function aa(){
+//       console.log(a);
+//       var a = 23;
+//     }
+//      aa()
+//   })(45);
+
+// function p (x){
+//     // function c (){
+//         console.log(x)
+//         var x = 10
+//     // }
+//     // return c()
+// }
+
+// p('1')
+
+// function bigFunc(element){
+//     let newArray = new Array(2).fill('♥');
+//     console.log(newArray);
+//     return newArray[element];
+//   }
+  
+//   console.log(bigFunc(599)); // Array is created
+//   console.log(bigFunc(670));
+
+// var firstWord = "secure";
+// var secondWord = "rescue";
+
+// let dd = isAnagram(firstWord, secondWord); // true
+// console.log(dd);
+// function isAnagram(one, two) {
+//   //Change both words to lowercase for case insensitivity..
+//   var a = one.toLowerCase();
+//   var b = two.toLowerCase();
+
+//   // Sort the strings, then combine the array to a string. Examine the outcomes.
+//   a = a.split("").sort().join("");
+//   b = b.split("").sort().join("");
+
+//   return a === b;
+// }
+// 62. 
+//a, e, i, o, u
+let str = "venkataramanaiah"
+let vow = ['a', 'e', 'i', 'o', 'u']
+let strArr = str.split('')
+let cv = []
+// console.log(strArr);
+for(let i in strArr){
+    if(vow.indexOf(strArr[i]) !== -1){
+        cv.push(strArr[i])
+    }
+}
+let co = strArr.filter(e =>{
+    if(cv.indexOf(e) == -1){
+        return e
+    }
+})
+// console.log(new Set(cv),co);
+let obj = { id: "1", name: "user22", age: "26", work: "programmer" };   
+console.log(Object.values(obj));
+
+  
+
+
+
+  let arr = [
+      {event: "ramDelivered", count:2},
+      {event: "ramFailed", count:4},
+      {event: "VenkatDelivered", count:7},
+      {event: "VenkatFailed", count:9},
+      {event: "rakeDelivered", count:6},
+      {event: "rakeFailed", count:5},
+  ]
+  
