@@ -49,10 +49,25 @@ import UseStateDataFetching from './components/UseStateVsUseReducer/UseStateData
 //UseReducer
 import UseReducerDataFetching from './components/UseStateVsUseReducer/UseReducerDataFetching'
 
+//useCallback - optimisation - retrun cached function
+import ContainerComponentCallback from './components/UseCallBack/ContainerComponent'
+
+//useMemo - ptimisation - retrun cached result
+import Counter from './components/UseMemo/Counter'
+
+//useRef
+import FocusInput from './components/UseRef/FocusInput'
+import TimerClass from './components/UseRef/TimerClass'
+import TimerHookUseRef from './components/UseRef/TimerHookUseRef'
+
+//customHook - for reusing existing code
+import DocTitleOne from './components/CustomHook/DocTitleOne'
+import DocTitleTwo from './components/CustomHook/DocTitleTwo'
+
+
 
 class App extends React.Component {
   componentDidMount() {
-    console.log("lll");
     axios.get("http://localhost:9000/users").then((res) => {
       console.log(res.data);
     });
@@ -61,7 +76,8 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <UseReducerDataFetching />
+        <DocTitleOne /> 
+        <DocTitleTwo />
       </div>
     );
   }
