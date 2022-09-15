@@ -1,0 +1,1 @@
+Node js is single threaded works on  event loop system, but behind the scenes it will mutli threaded

@@ -65,6 +65,21 @@ import DocTitleOne from './components/CustomHook/DocTitleOne'
 import DocTitleTwo from './components/CustomHook/DocTitleTwo'
 
 
+//ReactRedux
+import CakeContainer from './ReactRedux/CakeContainer'
+import store from "./ReactRedux/Store";
+import {Provider}  from 'react-redux'
+
+//react redux hooks
+import HooksCakeContainer from './ReactRedux/HooksCakeContainer'
+
+import IceCreamContainer from './ReactRedux/IceCreamContainer'
+import NewCakeContainer from './ReactRedux/NewCakeContainer'
+
+import ItemContainer from './ReactRedux/ItemContainer'
+import UserContainer from './ReactRedux/AsyncAction/UserContainer'
+
+
 
 class App extends React.Component {
   componentDidMount() {
@@ -75,10 +90,17 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="App">
-        <DocTitleOne /> 
-        <DocTitleTwo />
-      </div>
+      <Provider store={store} >
+        <div className="App">
+          {/* <HooksCakeContainer /> */}
+          {/* <CakeContainer />
+          <IceCreamContainer />
+          <NewCakeContainer />
+          <ItemContainer cake />
+          <ItemContainer /> */}
+          <UserContainer />
+        </div>
+      </Provider>
     );
   }
 }

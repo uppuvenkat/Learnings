@@ -484,7 +484,7 @@
 // console.log(1 || 2) // returns 1 -- checks for first value, if valid returns first itself otherwise second
 // console.log(1 && 2) // returns 2 -- checks for first value, if valid returns second
 
-//.10 ############ Spreadt and Rest operators
+//.10 ############ Spread and Rest operators
 // Spread - pulling out form existing arr and spreadding in to new array
 // let arr = [1,2,3,4]
 // let copArr = arr.splice() // copying the existing arr
