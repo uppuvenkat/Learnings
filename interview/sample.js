@@ -73,3 +73,46 @@
 // }
 
 // A();
+
+
+// Factorial
+
+// const fact = (n) =>{
+//     if(n==1){
+//         return 1
+//     }else{
+//         return n*fact(n-1)
+//     }
+// }
+
+// console.log(fact(5));
+
+//0 1 1 2 3 5 8 13 ...
+
+// const fibNocci = (n) =>{
+//     let arr = [0,1]
+//     for(let i=0; i<n-2; i++){
+//         let el = arr[arr.length-2] + arr[arr.length-1]
+//         arr.push(el)
+//     }
+//     return arr
+// }
+
+// let sries = fibNocci(6)
+// console.log(sries.join());
+
+const fibNocci = (n1, n2, n) =>{
+    let str = ''
+    if(n==1){
+        return '';
+    }else{
+        let r = n1 + n2
+        str = str + r + ' '
+        n1 = n2;
+        n2 = r
+        return str + fibNocci(n1, n2, n-1)
+    }
+}
+
+
+console.log(0 + ' ' +1 +" "+ fibNocci(0, 1, 8-1));

@@ -2,6 +2,9 @@ import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
 import axios from "axios";
+//router
+import {Routes, Route} from 'react-router-dom'
+
 
 //#######useState
 //hook counter example
@@ -78,6 +81,20 @@ import NewCakeContainer from './ReactRedux/NewCakeContainer'
 
 import ItemContainer from './ReactRedux/ItemContainer'
 import UserContainer from './ReactRedux/AsyncAction/UserContainer'
+import { Home } from "./Router/Home";
+// import { About } from "./Router/About";
+import { Navbar } from "./Router/Navbar";
+import { OrderSummary } from "./Router/OrderSummary";
+import { NoMatch } from "./Router/NoMatch";
+import { Products } from "./Router/Products";
+import { Featured } from "./Router/Featured";
+import { NewProduct } from "./Router/NewProduct";
+import { User } from "./Router/Users";
+import { UserDetails } from "./Router/UserDetails";
+import { Admin } from "./Router/Admin";
+
+const LazyAbout = React.lazy(()=> import('./Router/About'))
+//Router
 
 
 
@@ -98,7 +115,27 @@ class App extends React.Component {
           <NewCakeContainer />
           <ItemContainer cake />
           <ItemContainer /> */}
-          <UserContainer />
+          {/* <UserContainer /> */}
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            {/* <Route path="about" element={<About />} /> */}
+            <Route path="about" element={
+              <React.Suspense fallback='Loading...'>
+                <LazyAbout />
+              </React.Suspense>} 
+            />
+            <Route path="order-summary" element={<OrderSummary />} />
+            <Route path="products" element={<Products />} >
+              <Route index element={<Featured />} />
+              <Route path="featured" element={<Featured />} />
+              <Route path="new" element={<NewProduct />} />
+            </Route>
+            <Route path="users" element={<User />} />
+            <Route path="users/:id" element={<UserDetails />} />
+            <Route path="users/admin" element={<Admin />} />
+            <Route path="*" element={<NoMatch />} />
+          </Routes>
         </div>
       </Provider>
     );
