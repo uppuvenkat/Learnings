@@ -92,6 +92,10 @@ import { NewProduct } from "./Router/NewProduct";
 import { User } from "./Router/Users";
 import { UserDetails } from "./Router/UserDetails";
 import { Admin } from "./Router/Admin";
+import { Profile } from "./Router/Profile";
+import { AuthProvider } from "./Router/Auth";
+import { Login } from "./Router/Login";
+import { RequireAuth } from "./Router/RequireAuth";
 
 const LazyAbout = React.lazy(()=> import('./Router/About'))
 //Router
@@ -100,9 +104,9 @@ const LazyAbout = React.lazy(()=> import('./Router/About'))
 
 class App extends React.Component {
   componentDidMount() {
-    axios.get("http://localhost:9000/users").then((res) => {
-      console.log(res.data);
-    });
+    // axios.get("http://localhost:9000/users").then((res) => {
+    //   console.log(res.data);
+    // });
   }
 
   render() {
@@ -116,26 +120,30 @@ class App extends React.Component {
           <ItemContainer cake />
           <ItemContainer /> */}
           {/* <UserContainer /> */}
-          <Navbar />
-          <Routes>
-            <Route path="/" element={<Home />} />
-            {/* <Route path="about" element={<About />} /> */}
-            <Route path="about" element={
-              <React.Suspense fallback='Loading...'>
-                <LazyAbout />
-              </React.Suspense>} 
-            />
-            <Route path="order-summary" element={<OrderSummary />} />
-            <Route path="products" element={<Products />} >
-              <Route index element={<Featured />} />
-              <Route path="featured" element={<Featured />} />
-              <Route path="new" element={<NewProduct />} />
-            </Route>
-            <Route path="users" element={<User />} />
-            <Route path="users/:id" element={<UserDetails />} />
-            <Route path="users/admin" element={<Admin />} />
-            <Route path="*" element={<NoMatch />} />
-          </Routes>
+          <AuthProvider >
+            <Navbar />
+            <Routes>
+              <Route path="/" element={<Home />} />
+              {/* <Route path="about" element={<About />} /> */}
+              <Route path="about" element={
+                <React.Suspense fallback='Loading...'>
+                  <LazyAbout />
+                </React.Suspense>} 
+              />
+              <Route path="order-summary" element={<OrderSummary />} />
+              <Route path="products" element={<Products />} >
+                <Route index element={<Featured />} />
+                <Route path="featured" element={<Featured />} />
+                <Route path="new" element={<NewProduct />} />
+              </Route>
+              <Route path="users" element={<User />} />
+              <Route path="users/:id" element={<UserDetails />} />
+              <Route path="users/admin" element={<Admin />} />
+              <Route path="profile" element={<RequireAuth><Profile /></RequireAuth>} />
+              <Route path="login" element={<Login />} />
+              <Route path="*" element={<NoMatch />} />
+            </Routes>
+          </AuthProvider>
         </div>
       </Provider>
     );
