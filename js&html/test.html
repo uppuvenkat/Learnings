@@ -5,15 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link
+    rel="stylesheet"
+    href="https://static2.sharepointonline.com/files/fabric/office-ui-fabric-core/11.0.0/css/fabric.min.css"
+    />
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <style>
+        .test{
+            background-color: blueviolet;
+            margin: 10px;
+        }
+        .test1{
+            background-color: gray;
+            margin: 10px;
+        }   
+    </style>
 </head>
 <body>
     <div class="parent">
-        <p>this is line one 1</p>
-        <div class="child"></div>
-        <p>this is line three 3</p>
-        <div class="one">lkjlkjkljkll</div>
-        <div class="two">ttttttttttttttt</div>
+        <div class="ms-Grid" dir="ltr">
+            <div class="ms-Grid-row">
+              <div class="ms-Grid-col ms-md12 ms-lg5 test">A</div>
+              <div class="ms-Grid-col ms-lg6 test1">B</div>
+            </div>
+          </div>
     </div>
 </body>
 </html>

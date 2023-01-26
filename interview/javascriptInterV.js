@@ -784,35 +784,62 @@
 // }
 // 62. 
 //a, e, i, o, u
-let str = "venkataramanaiah"
-let vow = ['a', 'e', 'i', 'o', 'u']
-let strArr = str.split('')
-let cv = []
+// let str = "venkataramanaiah"
+// let vow = ['a', 'e', 'i', 'o', 'u']
+// let strArr = str.split('')
+// let cv = []
 // console.log(strArr);
-for(let i in strArr){
-    if(vow.indexOf(strArr[i]) !== -1){
-        cv.push(strArr[i])
-    }
-}
-let co = strArr.filter(e =>{
-    if(cv.indexOf(e) == -1){
-        return e
-    }
-})
+// for(let i in strArr){
+//     if(vow.indexOf(strArr[i]) !== -1){
+//         cv.push(strArr[i])
+//     }
+// }
+// let co = strArr.filter(e =>{
+//     if(cv.indexOf(e) == -1){
+//         return e
+//     }
+// })
 // console.log(new Set(cv),co);
-let obj = { id: "1", name: "user22", age: "26", work: "programmer" };   
-console.log(Object.values(obj));
+// let obj = { id: "1", name: "user22", age: "26", work: "programmer" };   
+// console.log(Object.values(obj));
 
-  
+//   let arr = [
+//       {event: "ramDelivered", count:2},
+//       {event: "ramFailed", count:4},
+//       {event: "VenkatDelivered", count:7},
+//       {event: "VenkatFailed", count:9},
+//       {event: "rakeDelivered", count:6},
+//       {event: "rakeFailed", count:5},
+//   ]
+
+// let arr = ["1", "Test User", "25", "Developer"];
+// let arr1 = [
+//   ["id", "1"],
+//   ["name", "Test User"],
+//   ["age", "25"],
+//   ["profession", "Developer"],
+// ];
+//console.log(Object.assign({}, arr));
+// console.log(Object.fromEntries(arr1));
+// console.log(Object.keys(obj));
+// console.log(Object.values(obj));
+// console.log(Object.entries(obj));
+//[["id", "1"],["name", "Test User"],["age", "25"],["profession", "Developer"]]
 
 
+// console.log(typeof undefined);
+// console.log(typeof null);
+// console.log(typeof NULL);
+// console.log(typeof typeof 1);   
 
-  let arr = [
-      {event: "ramDelivered", count:2},
-      {event: "ramFailed", count:4},
-      {event: "VenkatDelivered", count:7},
-      {event: "VenkatFailed", count:9},
-      {event: "rakeDelivered", count:6},
-      {event: "rakeFailed", count:5},
-  ]
-  
+// const number = undefined + 11;
+// if (number === NaN) {
+//   document.write("NaN");
+// } else if (number === 11) {
+//   document.write("11");
+// } else {
+//   document.write("other");
+// }
+
+// eventloop, javascript single threaded synchronous, asynchronous
+//https://medium.com/swlh/what-does-it-mean-by-javascript-is-single-threaded-language-f4130645d8a9
