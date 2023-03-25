@@ -1,0 +1,28 @@
+
+Javscript:
+
+1.What are primitives and non primitives
+2.let,	 var and const
+2.Strings, arrays, object and methods
+3.es6 features
+4.local storage, session storage and rdb
+5.promosies
+6.prototype
+7.event loop
+8.Pass by value and pass by reference
+9.call, apply and bind
+10.closure
+11.types of functions
+12.recursion functions
+13.class in javascript
+14.
+
+
+
+Summary:
+1.Javascript
+2.React Js
+3.Project
+4.Programming/coding
+5.Web components
+6.JWT/Authorisation/Authentication

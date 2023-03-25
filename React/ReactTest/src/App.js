@@ -120,10 +120,12 @@ class App extends React.Component {
           <ItemContainer cake />
           <ItemContainer /> */}
           {/* <UserContainer /> */}
+          <HookCounterFour />
           <AuthProvider >
             <Navbar />
             <Routes>
               <Route path="/" element={<Home />} />
+              {/* <Route path="HookCounterFour" element={<HookCounterFour />} /> */}
               {/* <Route path="about" element={<About />} /> */}
               <Route path="about" element={
                 <React.Suspense fallback='Loading...'>

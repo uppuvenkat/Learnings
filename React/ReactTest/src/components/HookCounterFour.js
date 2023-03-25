@@ -8,6 +8,7 @@ export default function HookCounterFour(){
     }
 
    const  onDelete = () =>{
+        arr.pop()
         setArr([...arr])
     }
     return(

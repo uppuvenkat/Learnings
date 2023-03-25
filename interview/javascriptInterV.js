@@ -2,7 +2,7 @@
 // var a = 10;
 // var a = 20;
 // console.log(a)
-//a. functional scope
+//a.functional scope
 //b.redeclared and reassigned
 
 // let a = 10;
@@ -39,7 +39,7 @@
 
 //4, 5. ################################################### Class and new ClassIdentifier(), public,static and constructor methods in Classes.
 
-//normal getDetails method
+//normal getDetails method  
 // class Car{
 //     constructor(name){
 //         this.name = name
@@ -843,3 +843,7 @@
 
 // eventloop, javascript single threaded synchronous, asynchronous
 //https://medium.com/swlh/what-does-it-mean-by-javascript-is-single-threaded-language-f4130645d8a9
+//https://www.geeksforgeeks.org/what-is-an-event-loop-in-javascript/
+
+
+//react router
